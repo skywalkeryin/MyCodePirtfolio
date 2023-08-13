@@ -371,6 +371,7 @@ body {
   text-decoration: none;
   border-bottom: 1px solid #55c57a;
   padding: 3px;
+  transition: all 0.2s;
 }
 .btn-text:hover {
   background-color: #55c57a;
@@ -403,9 +404,33 @@ body {
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50%);
   margin-right: 3rem;
+  position: relative;
 }
 .story__img {
   height: 100%;
+  transform: translateX(-4rem) scale(1.1);
+  transition: all 0.5s;
+}
+.story__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.story:hover .story__caption {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.story:hover .story__img {
+  transform: translateX(-4rem) scale(1);
+  filter: blur(3px) brightness(80%);
 }
 
 .row {
