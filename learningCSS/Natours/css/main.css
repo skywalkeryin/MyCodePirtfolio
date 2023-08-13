@@ -137,6 +137,22 @@ body {
   margin-top: 10rem;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.15;
+  z-index: -1;
+}
+.bg-video__content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .composition {
   position: relative;
 }
@@ -388,7 +404,7 @@ body {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding: 6rem;
   transform: skewX(-12deg);
@@ -551,4 +567,5 @@ body {
 
 .section-stories {
   padding: 25rem;
+  position: relative;
 }/*# sourceMappingURL=main.css.map */
