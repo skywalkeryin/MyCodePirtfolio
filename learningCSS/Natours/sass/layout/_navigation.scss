@@ -1,0 +1,95 @@
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    background-color: $color-white;
+
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+
+    z-index: 150;
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+
+    background-image: radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 100;
+
+    transform: scale(80);
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 100vh;
+  }
+
+  &__list {
+    list-style: none;
+    text-align: center;
+
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 200;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      font-size: 3rem;
+      font-weight: 300;
+
+      padding: 1rem 2rem;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 226%;
+
+      transition: all 0.4s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-grey-dark-3;
+      /*(container width - image width) * (position x%) = (x offset value)
+(container height - image height) * (position y%) = (y offset value)*/
+      background-position: 100%;
+      transform: translateX(-1rem);
+    }
+
+    span {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  }
+}
