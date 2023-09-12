@@ -682,7 +682,8 @@ body {
   position: fixed;
   top: 6rem;
   right: 6rem;
-  z-index: 150;
+  z-index: 300;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .navigation__background {
   height: 6rem;
@@ -693,20 +694,26 @@ body {
   top: 6.5rem;
   right: 6.5rem;
   z-index: 100;
-  transform: scale(80);
+  transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .navigation__nav {
   height: 100vh;
-  width: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+  width: 0;
+  opacity: 0;
+  transition: all 0.8s;
 }
 .navigation__list {
-  list-style: none;
-  text-align: center;
-  position: fixed;
+  position: absolute;
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  z-index: 200;
+  list-style: none;
+  text-align: center;
+  width: 100%;
 }
 .navigation__item {
   margin: 1rem;
@@ -733,6 +740,13 @@ body {
 .navigation__link span {
   display: inline-block;
   margin-right: 1rem;
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80);
+}
+.navigation__checkbox:checked ~ .navigation__nav {
+  width: 100%;
+  opacity: 1;
 }
 
 .section-about {
