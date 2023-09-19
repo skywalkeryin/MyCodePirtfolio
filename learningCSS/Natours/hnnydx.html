@@ -27,8 +27,8 @@
          */
         background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0idmlzdWFsIiB2aWV3Qm94PSIwIDAgOTAwIDYwMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSI2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSI+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSI2MDAiIGZpbGw9IiMyMTY3MmYiPjwvcmVjdD48cGF0aCBkPSJNMCAyOTlMNTAgMzA4LjNDMTAwIDMxNy43IDIwMCAzMzYuMyAzMDAgMzM1QzQwMCAzMzMuNyA1MDAgMzEyLjMgNjAwIDMwNkM3MDAgMjk5LjcgODAwIDMwOC4zIDg1MCAzMTIuN0w5MDAgMzE3TDkwMCA2MDFMODUwIDYwMUM4MDAgNjAxIDcwMCA2MDEgNjAwIDYwMUM1MDAgNjAxIDQwMCA2MDEgMzAwIDYwMUMyMDAgNjAxIDEwMCA2MDEgNTAgNjAxTDAgNjAxWiIgZmlsbD0iIzMzODM0MyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49Im1pdGVyIj48L3BhdGg+PC9zdmc+);
         background-position-x: -140px;
-        background-position-y: -207px;
-        height: 210px;
+        background-position-y: -160px;
+        height: 280px;
       }
 
       .header img {
@@ -39,9 +39,11 @@
 
       .header .header-clock {
         display: block;
-        margin: 30px 0 0;
+        width: 85%;
+        margin: 46px auto 0;
         color: white;
-        font-size: 5rem;
+        font-size: 5.7rem;
+        font-weight: 600;
         text-align: center;
       }
 
@@ -49,67 +51,35 @@
         display: block;
         text-align: center;
         color: white;
-        margin: 8px 0;
-        font-size: 1.5rem;
+        margin: 11px 0;
+        font-size: 2.7rem;
+        font-weight: 500;
       }
 
       .body .body-btn {
         display: block;
         width: 85%;
-        height: 40px;
-        margin: 15px auto;
+        height: 50px;
+        margin: 25px auto;
 
         color: white;
         text-align: center;
-        font-size: 1.8rem;
+        font-size: 2rem;
 
-        background-color: #247434;
+        background-color: #007b42;
 
         border: none;
-        border-radius: 6px;
+        border-radius: 9px;
       }
 
       .body .body_profile {
         width: 90%;
         margin: 0 auto;
 
-        border: 1px solid #e5e7eb;
+        border: 1px solid #9ca3af;
+        border-radius: 5px;
         padding: 15px 10px;
       }
-
-      /* .body .body_profile .li {
-        display: flex;
-        align-items: center;
-      }
-
-      .body .body_profile .li:last-child {
-        margin-top: 35px;
-      } */
-
-      /* .body .body_profile .body_profile-name {
-        display: inline-block;
-        width: 85px;
-        height: 35px;
-
-        font-size: 2rem;
-        font-weight: 500;
-        color: #000;
-
-        text-align: justify;
-      }
-
-      .body .body_profile .body_profile-name::after {
-        content: "";
-        display: inline-block;
-        padding-left: 100%;
-      }
-
-      .body .body_profile .body_profile-value {
-        height: 35px;
-        font-size: 2rem;
-        font-weight: 500;
-        color: #000;
-      } */
 
       .body .body_profile .body_profile-content {
         display: flex;
@@ -118,7 +88,7 @@
 
         height: 35px;
 
-        font-size: 1.8rem;
+        font-size: 2.2rem;
 
         color: #000;
       }
@@ -129,10 +99,10 @@
 
       .body .body_profile .body_profile-name {
         display: inline-block;
-        width: 80px;
+        width: 103px;
         text-align: justify;
         height: 35px;
-        font-weight: 600;
+        font-weight: 550;
       }
 
       .body .body_profile .body_profile-name::after {
@@ -150,6 +120,7 @@
       .body .body_profile .body_profile-value {
         height: 35px;
         font-weight: 400;
+        letter-spacing: 1px;
       }
     </style>
   </head>
@@ -165,13 +136,13 @@
     </div>
 
     <div class="body">
-      <button class="body-btn">&#10004; 允许同行</button>
+      <button class="body-btn">&#10004; 允许通行</button>
 
       <div class="body_profile">
         <div class="body_profile-content">
           <div class="body_profile-name">姓名</div>
           <div class="body_profile-mid">:</div>
-          <div class="body_profile-value">张丽英</div>
+          <div class="body_profile-value">孟强</div>
         </div>
         <div class="body_profile-content">
           <div class="body_profile-name">学工号</div>
@@ -225,7 +196,7 @@
         const hours = String(date.getHours()).padStart(2, "0");
         const minutes = String(date.getMinutes()).padStart(2, "0");
         const seconds = String(date.getSeconds()).padStart(2, "0");
-        const formattedDateTime = `${hours} : ${minutes} : ${seconds}`;
+        const formattedDateTime = `${hours}  :  ${minutes}  :  ${seconds}`;
 
         return formattedDateTime;
       }
