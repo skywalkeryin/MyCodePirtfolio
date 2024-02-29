@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VueJs Course</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="app">
-        <p>hey</p>
-        {{message}}
+      <p>{{firstName}}</p>
+      <p>age: {{age}}</p>
+
+      <hr />
+      <input v-model="age" />
+      <button v-on:click="increment">Increment</button>
+      <button v-on:click="decrement">Decrement</button>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
